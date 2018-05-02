@@ -1,0 +1,26 @@
+{
+  "name": "telugumeter_service",
+  "version": "1.0.0",
+  "description": "A NodeJS powered service to serve the telugu movie review aggregator chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasarianudeep/telugumeter_service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dasarianudeep/telugumeter_service/issues"
+  },
+  "homepage": "https://github.com/dasarianudeep/telugumeter_service#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3"
+  }
+}
