@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/dasarianudeep/telugumeter_service/issues"
   },
+  "engines": {
+    "node": "8.9.4"
+  },
   "homepage": "https://github.com/dasarianudeep/telugumeter_service#readme",
   "dependencies": {
     "axios": "^0.18.0",
