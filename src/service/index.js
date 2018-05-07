@@ -42,6 +42,7 @@ const getReviews =  (movieLink) => {
                 reviews: []
             };
             movie.name = movieLink.attr('title').toUpperCase();
+            movie.movieAvatar = movieLink.find('img').attr('src');
             movie.releaseDate = movieLink.siblings('span').text().split(':')[1].trim();
             const pageResponse = await axios.get(movieLink.attr('href'));
             const pageResponseData = pageResponse.data;
