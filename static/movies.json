@@ -1,6 +1,68 @@
 {
 	"movies": [
 		{
+			"name": "NAA PERU SURYA",
+			"releaseDate": "04th May, 2018",
+			"reviews": [
+				{
+					"siteUrl": "http://www.gulte.com/moviereviews/680/Review-Naa-Peru-Surya-Movie-Review",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/gulte.jpg",
+					"rating": "2.75/5",
+					"verdict": "Surya Shines, But the Script Doesn't!",
+					"siteName": "GULTE"
+				},
+				{
+					"siteUrl": "https://www.greatandhra.com/movies/reviews/naa-peru-surya-review-lacks-impact-89238.html",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/telugugreatandhra.jpg",
+					"rating": "2.75/5",
+					"verdict": "Lacks Impact",
+					"siteName": "GREATANDHRA"
+				},
+				{
+					"siteUrl": "http://www.tupaki.com/movie/review/Naa-Peru-Surya/749",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/tupaki.png",
+					"rating": "2.75/5",
+					"verdict": "Surya Good But....",
+					"siteName": "TUPAKI"
+				},
+				{
+					"siteUrl": "http://idlebrain.com/movie/archive/naaperusurya.html",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/idlebrain.gif",
+					"rating": "3/5",
+					"verdict": "Fighting the enemy within",
+					"siteName": "IDLEBRAIN"
+				},
+				{
+					"siteUrl": "http://www.cinejosh.com/review/naa-peru-surya-review/916",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/cinejosh.jpg",
+					"rating": "2.75/5",
+					"verdict": "Bunny Stands On Border",
+					"siteName": "CINEJOSH"
+				},
+				{
+					"siteUrl": "http://www.123telugu.com/reviews/allu-arjun-naa-peru-surya-telugu-movie-review.html",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/123_telugu.png",
+					"rating": "3/5",
+					"verdict": "Story of an aggressive soldier",
+					"siteName": "123TELUGU"
+				},
+				{
+					"siteUrl": "https://www.chitramala.in/naa-peru-surya-naa-illu-india-review-264138.html",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/chitramalain.jpg",
+					"rating": "3/5",
+					"verdict": "Na Peru Surya, Na Illu India is a film which is indeed not to be missed because of the action elements and the patriotic factor.",
+					"siteName": "CHITRAMALA"
+				},
+				{
+					"siteUrl": "https://www.telugu360.com/naa-peru-surya-review-naa-peru-surya-naa-illu-india-review-rating/",
+					"sitelogo": "http://www.ratingdada.com/images/site_logo/telugu360.png",
+					"rating": "2.75/5",
+					"verdict": "Allu Arjun excels in a weak plot.",
+					"siteName": "TELUGU360"
+				}
+			]
+		},
+		{
 			"name": "ACHARI AMERICA YATRA",
 			"releaseDate": "27th Apr, 2018",
 			"reviews": [
@@ -677,55 +739,7 @@
 					"siteName": "TELUGU360"
 				}
 			]
-		},
-		{
-			"name": "INTELLIGENT",
-			"releaseDate": "09th Feb, 2018",
-			"reviews": [
-				{
-					"siteUrl": "http://www.gulte.com/moviereviews/668/Movie-Review-Intelligent-Movie-Review",
-					"sitelogo": "http://www.ratingdada.com/images/site_logo/gulte.jpg",
-					"rating": "2/5",
-					"verdict": "An intelligent dud.",
-					"siteName": "GULTE"
-				},
-				{
-					"siteUrl": "https://www.greatandhra.com/movies/reviews/inttelligent-review-idiotic-87412.html",
-					"sitelogo": "http://www.ratingdada.com/images/site_logo/telugugreatandhra.jpg",
-					"rating": "1.5/5",
-					"verdict": "Idiotic!",
-					"siteName": "GREATANDHRA"
-				},
-				{
-					"siteUrl": "http://www.tupaki.com/movie/review/Inttelligent/722",
-					"sitelogo": "http://www.ratingdada.com/images/site_logo/tupaki.png",
-					"rating": "1.75/5",
-					"verdict": "Out Dated",
-					"siteName": "TUPAKI"
-				},
-				{
-					"siteUrl": "http://www.123telugu.com/reviews/inttelligent-telugu-movie-review.html",
-					"sitelogo": "http://www.ratingdada.com/images/site_logo/123_telugu.png",
-					"rating": "2.5/5",
-					"verdict": "Not so Clever",
-					"siteName": "123TELUGU"
-				},
-				{
-					"siteUrl": "http://www.cinejosh.com/news/1/58796/intelligent-review.html",
-					"sitelogo": "http://www.ratingdada.com/images/site_logo/cinejosh.jpg",
-					"rating": "2/5",
-					"verdict": "No Intelligence in making.",
-					"siteName": "CINEJOSH"
-				},
-				{
-					"siteUrl": "https://www.chitramala.in/intelligent-movie-review-258980.html",
-					"sitelogo": "http://www.ratingdada.com/images/site_logo/chitramalain.jpg",
-					"rating": "2/5",
-					"verdict": "Skip it.",
-					"siteName": "CHITRAMALA"
-				}
-			]
 		}
 	],
-	"createdOn": "2018-5-1 14:45:05"
+	"createdOn": "2018-5-7 09:34:18"
 }

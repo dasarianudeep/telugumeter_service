@@ -74,11 +74,12 @@ const getReviews =  (movieLink) => {
 }
 
 module.exports = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try {
         await getMovies();
         const moviesJson = require('../../static/movies');
         res.json(moviesJson);
     } catch (err) {
-        res.json({ response: '', error: err });
+        res.json({ response: require('../../static/movies'), error: err });
     }
 }
