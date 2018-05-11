@@ -3,9 +3,17 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
+const _ = require('lodash');
 
 const sites = ['gulte', 'greatandhra', 'tupaki', 'idlebrain',
                 'cinejosh', '123telugu', 'telugu360', 'telugumirchi', 'chitramala'];
+
+const response = {
+    movies: {
+        telugu: [],
+        english: []
+    }
+};
 
 const getOnlyDomainName = hostname => {
     const splitHost = hostname.split('.');
@@ -15,24 +23,46 @@ const getOnlyDomainName = hostname => {
         return splitHost[0];
     }
 }
-const getMovies = async () => {
-    let $, response = { movies: [] };
+const getTeluguMovieReviews = async () => {
+    let $;
     try {
         const pageResponse = await axios.get('http://www.ratingdada.com/1/telugu-movie-reviews-ratings');
         const pageResponseData = pageResponse.data;
         $ = cheerio.load(pageResponseData);
         let moviesLinks = $('#titlesdiv .grid_3 > a');
-        const getReviewPromises = moviesLinks.map(i => getReviews(moviesLinks.eq(i))).get();
+        const getReviewPromises = moviesLinks.map(i => getTeluguReviews(moviesLinks.eq(i))).get();
         response.createdOn = new Date().toLocaleString();
-        response.movies = await Promise.all(getReviewPromises);
-        fs.writeFileSync(path.join(__dirname,'../../static/movies.json'), JSON.stringify(response, null, '\t'));
+        response.movies.telugu = await Promise.all(getReviewPromises);
     } catch (err) {
         console.log(err);
         return err;
     }
 }
 
-const getReviews =  (movieLink) => {
+const getEnglishMovieReviews = async () => {
+    let $;
+    try {
+        const pageResponse = await axios.get('https://www.imdb.com/showtimes/');
+        const pageResponseData = pageResponse.data;
+        $ = cheerio.load(pageResponseData);
+        const movieLinks = $(`div.list_item[itemtype='http://schema.org/Movie']`).slice(0, 100);
+        movieLinks.each(function(i, link) {
+            const movieReview = {};
+            movieReview.posterUrl = $(link).find(`img[itemprop='image']`).attr('src');
+            movieReview.name = $(link).find(`span[itemprop='name'] a[itemprop='url']`).text().includes('(') ?
+                $(link).find(`span[itemprop='name'] a[itemprop='url']`).text().split('(')[0].trim():
+                $(link).find(`span[itemprop='name'] a[itemprop='url']`).text();
+            movieReview.imdbRating = $(link).find(`span[itemprop='aggregateRating'] [itemprop='ratingValue']`).text().trim() || 'N/A';
+            movieReview.metascore = $(link).find(`span[itemprop='aggregateRating'] .metascore`).text().trim() || 'N/A';
+            response.movies.english.push(movieReview);
+        })
+        response.movies.english = _.uniqWith(response.movies.english.filter(movie => movie.name !== ''), _.isEqual);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+const getTeluguReviews =  (movieLink) => {
     return new Promise(async (resolve, reject) => {
         try {
             let $;
@@ -77,10 +107,12 @@ const getReviews =  (movieLink) => {
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     try {
-        await getMovies();
+        await getTeluguMovieReviews();
+        await getEnglishMovieReviews();
+        fs.writeFileSync(path.join(__dirname,'../../static/movies.json'), JSON.stringify(response, null, '\t'));
         const moviesJson = require('../../static/movies');
         res.json(moviesJson);
     } catch (err) {
-        res.json({ response: require('../../static/movies'), error: err });
+        res.json({ response: require('../../static/movies'), error: err.toString() });
     }
 }
