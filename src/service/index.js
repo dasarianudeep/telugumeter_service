@@ -109,6 +109,7 @@ const getTeluguReviews =  (movieLink) => {
 
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    fs.unlinkSync(path.join(__dirname,'../../static/movies.json'));
     let moviesJson = {};
     try {
         await getTeluguMovieReviews();

@@ -2,6 +2,20 @@
 	"movies": {
 		"telugu": [
 			{
+				"name": "MEHBOOBA",
+				"releaseDate": "11th May, 2018",
+				"reviews": [
+					{
+						"siteUrl": "https://www.chitramala.in/mehbooba-telugu-movie-review-265046.html",
+						"sitelogo": "http://www.ratingdada.com/images/site_logo/chitramalain.jpg",
+						"rating": "2.5/5",
+						"verdict": "To sum up, Mehbooba is a one time watchable love story which has its highs and lows.",
+						"siteName": "CHITRAMALA"
+					}
+				],
+				"movieAvatar": "http://www.ratingdada.com/images/3/05112018115925am_mehbooba-posters.jpg"
+			},
+			{
 				"name": "MAHANATI",
 				"releaseDate": "09th May, 2018",
 				"reviews": [
@@ -763,34 +777,6 @@
 					}
 				],
 				"movieAvatar": "http://www.ratingdada.com/images/3/12132017122059pm_manasuku-nachindi-t.jpg"
-			},
-			{
-				"name": "IDHI NAA LOVE STORY",
-				"releaseDate": "15th Feb, 2018",
-				"reviews": [
-					{
-						"siteUrl": "http://www.tupaki.com/movie/review/Idi-Naa-Love-Story/728",
-						"sitelogo": "http://www.ratingdada.com/images/site_logo/tupaki.png",
-						"rating": "1.5/5",
-						"verdict": "idi love less boring story",
-						"siteName": "TUPAKI"
-					},
-					{
-						"siteUrl": "https://www.chitramala.in/idi-naa-love-story-review-259108.html",
-						"sitelogo": "http://www.ratingdada.com/images/site_logo/chitramalain.jpg",
-						"rating": "1/5",
-						"verdict": "To sum up, Idhi Naa Love Story is another big disappointment for Tarun.",
-						"siteName": "CHITRAMALA"
-					},
-					{
-						"siteUrl": "https://www.telugu360.com/idi-naa-love-story-review-tarun/",
-						"sitelogo": "http://www.ratingdada.com/images/site_logo/telugu360.png",
-						"rating": "1.5/5",
-						"verdict": "Audience pain story !",
-						"siteName": "TELUGU360"
-					}
-				],
-				"movieAvatar": "http://www.ratingdada.com/images/3/07102017042524pm_Idi-Naa-Love-Story-small.jpg"
 			}
 		],
 		"english": [
@@ -825,16 +811,16 @@
 				"metascore": "69"
 			},
 			{
+				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BOGU2YTZmMjYtZDUwYi00NTc1LTlkMjAtM2ViZDkzOTlhNGNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+				"name": "Truth or Dare",
+				"imdbRating": "4.7",
+				"metascore": "35"
+			},
+			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BNTQwNjc3NjE5MF5BMl5BanBnXkFtZTgwNTEzMDg5NDM@._V1_UX67_CR0,0,67,98_AL_.jpg",
 				"name": "Breaking In",
 				"imdbRating": "5.3",
-				"metascore": "N/A"
-			},
-			{
-				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BMTU1ODM2Nzk1OV5BMl5BanBnXkFtZTgwMzA4MTc5NDM@._V1_UX67_CR0,0,67,98_AL_.jpg",
-				"name": "Chappaquiddick",
-				"imdbRating": "6.8",
-				"metascore": "67"
+				"metascore": "40"
 			},
 			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BZjA5MjZkNmQtNmI1ZS00M2RiLWFlMmUtNGU1ZjA4YTA0NjliXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_UY98_CR3,0,67,98_AL_.jpg",
@@ -843,16 +829,10 @@
 				"metascore": "48"
 			},
 			{
-				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BMTYyOTUwNjAxM15BMl5BanBnXkFtZTgwODcyMzE0NDM@._V1_UX67_CR0,0,67,98_AL_.jpg",
-				"name": "Isle of Dogs",
-				"imdbRating": "8.2",
-				"metascore": "82"
-			},
-			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BMTkzOTk0MjYwM15BMl5BanBnXkFtZTgwNTE5ODQxNTM@._V1_UX67_CR0,0,67,98_AL_.jpg",
 				"name": "Life of the Party",
 				"imdbRating": "4.7",
-				"metascore": "N/A"
+				"metascore": "48"
 			},
 			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BM2E5MWYwYTktMmIxZC00MWVkLTk4YjctNGU1OGVjMDIwNzM2XkEyXkFqcGdeQXVyNTAwODk1NzY@._V1_UY98_CR1,0,67,98_AL_.jpg",
@@ -867,12 +847,6 @@
 				"metascore": "45"
 			},
 			{
-				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BNTE4Nzc0NDU3Nl5BMl5BanBnXkFtZTgwODIzMTQzNTM@._V1_UX67_CR0,0,67,98_AL_.jpg",
-				"name": "RBG",
-				"imdbRating": "7.6",
-				"metascore": "72"
-			},
-			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BY2JiYTNmZTctYTQ1OC00YjU4LWEwMjYtZjkwY2Y5MDI0OTU3XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX67_CR0,0,67,98_AL_.jpg",
 				"name": "Ready Player One",
 				"imdbRating": "7.8",
@@ -885,10 +859,16 @@
 				"metascore": "75"
 			},
 			{
-				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BOGU2YTZmMjYtZDUwYi00NTc1LTlkMjAtM2ViZDkzOTlhNGNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
-				"name": "Truth or Dare",
-				"imdbRating": "4.7",
-				"metascore": "35"
+				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BMTYyOTUwNjAxM15BMl5BanBnXkFtZTgwODcyMzE0NDM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+				"name": "Isle of Dogs",
+				"imdbRating": "8.2",
+				"metascore": "82"
+			},
+			{
+				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BNTE4Nzc0NDU3Nl5BMl5BanBnXkFtZTgwODIzMTQzNTM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+				"name": "RBG",
+				"imdbRating": "7.6",
+				"metascore": "72"
 			},
 			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BMzNhMDkzYzQtNWQ4Ni00NjkwLTg2NTAtNDVkZTZkYjU0NDM3XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UY98_CR0,0,67,98_AL_.jpg",
@@ -913,6 +893,12 @@
 				"name": "Di ya cao",
 				"imdbRating": "5.6",
 				"metascore": "N/A"
+			},
+			{
+				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BMTU1ODM2Nzk1OV5BMl5BanBnXkFtZTgwMzA4MTc5NDM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+				"name": "Chappaquiddick",
+				"imdbRating": "6.8",
+				"metascore": "67"
 			},
 			{
 				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BNGQ2ODllYWEtNGY2MC00OTFjLTk2MTUtZWJjZGQwZmM4YjA4XkEyXkFqcGdeQXVyNTgxODY5ODI@._V1_UY98_CR1,0,67,98_AL_.jpg",
@@ -943,14 +929,8 @@
 				"name": "Traffik",
 				"imdbRating": "7.6",
 				"metascore": "37"
-			},
-			{
-				"posterUrl": "https://ia.media-imdb.com/images/M/MV5BZmFhMjM2NmQtYWM3Yi00YmJhLWIxOTgtYWY3ZjNlYzMwOWJmXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_UY98_CR5,0,67,98_AL_.jpg",
-				"name": "Super Troopers 2",
-				"imdbRating": "7",
-				"metascore": "40"
 			}
 		]
 	},
-	"createdOn": "2018-5-10 23:18:23"
+	"createdOn": "2018-5-10 23:42:08"
 }
