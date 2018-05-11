@@ -35,6 +35,7 @@ const getTeluguMovieReviews = async () => {
         response.movies.telugu = await Promise.all(getReviewPromises);
     } catch (err) {
         console.log(err);
+        response.error = `Failed to get telugu movie reviews - ${err}`;
         return err;
     }
 }
@@ -58,7 +59,9 @@ const getEnglishMovieReviews = async () => {
         })
         response.movies.english = _.uniqWith(response.movies.english.filter(movie => movie.name !== ''), _.isEqual);
     } catch (err) {
-        console.log(err)
+        console.log(err);
+        response.error = `Failed to get english movie reviews - ${err}`;
+        return err;
     }
 }
 
@@ -106,13 +109,14 @@ const getTeluguReviews =  (movieLink) => {
 
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    let moviesJson = {};
     try {
         await getTeluguMovieReviews();
         await getEnglishMovieReviews();
         fs.writeFileSync(path.join(__dirname,'../../static/movies.json'), JSON.stringify(response, null, '\t'));
-        const moviesJson = require('../../static/movies');
+        moviesJson = require('../../static/movies');
         res.json(moviesJson);
     } catch (err) {
-        res.json({ response: require('../../static/movies'), error: err.toString() });
+        res.status(500).json(response);
     }
 }
