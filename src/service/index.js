@@ -113,7 +113,7 @@ module.exports = async (req, res) => {
     let moviesJson = {};
     try {
         await getTeluguMovieReviews();
-        await getEnglishMovieReviews();
+        //await getEnglishMovieReviews();
         fs.writeFileSync(path.join(__dirname,'../../static/movies.json'), JSON.stringify(response, null, '\t'));
         moviesJson = require('../../static/movies');
         res.json(moviesJson);
