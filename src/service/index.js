@@ -5,7 +5,7 @@ const path = require('path');
 const url = require('url');
 const _ = require('lodash');
 
-const sites = ['gulte', 'greatandhra', 'tupaki', 'idlebrain',
+const sites = ['gulte', 'greatandhra', 'tupaki', 'idlebrain', 'iqlikmovies',
                 'cinejosh', '123telugu', 'telugu360', 'telugumirchi', 'chitramala'];
 
 const response = {
@@ -109,11 +109,12 @@ const getTeluguReviews =  (movieLink) => {
 
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    fs.unlinkSync(path.join(__dirname,'../../static/movies.json'));
+    if (fs.existsSync(path.join(__dirname,'../../static/movies.json'))) {
+        fs.unlinkSync(path.join(__dirname,'../../static/movies.json'));
+    }
     let moviesJson = {};
     try {
         await getTeluguMovieReviews();
-        //await getEnglishMovieReviews();
         fs.writeFileSync(path.join(__dirname,'../../static/movies.json'), JSON.stringify(response, null, '\t'));
         moviesJson = require('../../static/movies');
         res.json(moviesJson);
