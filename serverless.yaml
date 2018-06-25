@@ -1,0 +1,16 @@
+service: movie-reviews-ratings-aggregator
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{any+}
+          method: ANY

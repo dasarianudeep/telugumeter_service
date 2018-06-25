@@ -109,14 +109,14 @@ const getTeluguReviews =  (movieLink) => {
 
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    if (fs.existsSync(path.join(__dirname,'../../static/movies.json'))) {
-        fs.unlinkSync(path.join(__dirname,'../../static/movies.json'));
+    if (fs.existsSync(path.join('/tmp/movies.json'))) {
+        fs.unlinkSync(path.join('/tmp/movies.json'));
     }
     let moviesJson = {};
     try {
         await getTeluguMovieReviews();
-        fs.writeFileSync(path.join(__dirname,'../../static/movies.json'), JSON.stringify(response, null, '\t'));
-        moviesJson = require('../../static/movies');
+        fs.writeFileSync(path.join('/tmp/movies.json', JSON.stringify(response, null, '\t')));
+        moviesJson = require('/tmp/movies');
         res.json(moviesJson);
     } catch (err) {
         res.status(500).json(response);
