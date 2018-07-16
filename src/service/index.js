@@ -115,10 +115,11 @@ module.exports = async (req, res) => {
     let moviesJson = {};
     try {
         await getTeluguMovieReviews();
-        fs.writeFileSync(path.join('/tmp/movies.json', JSON.stringify(response, null, '\t')));
+        fs.writeFileSync(path.join('/tmp/movies.json'), JSON.stringify(response, null, '\t'));
         moviesJson = require('/tmp/movies');
         res.json(moviesJson);
     } catch (err) {
+        console.log(err);
         res.status(500).json(response);
     }
 }
